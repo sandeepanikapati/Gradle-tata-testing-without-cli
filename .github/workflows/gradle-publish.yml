@@ -31,8 +31,8 @@ jobs:
       #     JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }} 
       - name: Publish to Jfrog
         run: |
-          jfrog rt gradle clean artifactoryPublish -b . --build-name=interaction-service --build-number=1234
-          jfrog rt bp --build-name=interaction-service --build-number=1234
+          jfrog rt gradle clean artifactoryPublish -b .
+          jfrog rt bp
           
         env:
           JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
