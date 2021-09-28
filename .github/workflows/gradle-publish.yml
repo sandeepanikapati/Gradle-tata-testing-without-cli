@@ -22,7 +22,7 @@ jobs:
         env:
           JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
       - run: |
-          frog rt ping
+          jfrog rt ping
       - run: |
           jfrog rt gradlec --global --server-id-resolve=artifactory --server-id-deploy=artifactory --repo-resolve=beaute-gradle-dev --repo-deploy=gradle-local
       #
