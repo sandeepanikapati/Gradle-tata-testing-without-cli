@@ -1,4 +1,4 @@
-name: Harishgoud
+name: Harishgoud latest
 on: [push, pull_request]
 jobs:
   build:
