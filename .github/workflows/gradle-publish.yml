@@ -31,7 +31,7 @@ jobs:
       #     JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }} 
       - name: Publish to Jfrog
         run: |
-          jfrog rt gradle clean artifactoryPublish -b /home/runner/work/tata-testing/tata-testing/settings.gradle
+          jfrog rt gradle clean artifactoryPublish -b /home/runner/work/tata-testing/tata-testing/build.gradle
           jfrog rt bp
           
         env:
