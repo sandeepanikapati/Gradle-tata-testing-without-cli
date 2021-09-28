@@ -28,21 +28,9 @@ buildscript {
         }
     }
 }
-apply plugin: 'com.jfrog.artifactory'
 
 def javaProjects() {
     subprojects.findAll { new File(it.projectDir, 'src').directory }
-}
-
-allprojects {
-    group = 'org.jfrog.test.gradle.publish'
-    version = currentVersion
-    status = 'Integration'
-    repositories {
-        maven {
-            url "http://127.0.0.1:8081/artifactory/libs-release"
-        }
-    }
 }
 
 // Setting this property to true will make the artifactoryPublish task
