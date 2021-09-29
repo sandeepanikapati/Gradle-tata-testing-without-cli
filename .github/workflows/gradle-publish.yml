@@ -1,4 +1,4 @@
-name: Publish package to the Maven Central Repository and GitHub Packages
+name: Harish-testing
 on: [push, pull_request]
 jobs:
   publish:
