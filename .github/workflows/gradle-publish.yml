@@ -19,7 +19,7 @@ jobs:
       #- name: Make gradlew executable
       #  run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: ./gradlew build --warning-mode fail
+        run: gradlew build --warning-mode fail
       - name: Publish package
         run: gradle publish
         env: 
