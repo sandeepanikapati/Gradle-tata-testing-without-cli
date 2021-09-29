@@ -38,9 +38,7 @@ project('services') {
 configure(javaProjects()) {
     apply plugin: 'java'
     apply plugin: 'maven-publish'
-
-    dependencies {
-        testCompile 'junit:junit:4.7'
+    
     }
 
     publishing {
