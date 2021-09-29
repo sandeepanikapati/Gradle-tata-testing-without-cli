@@ -55,10 +55,10 @@ jobs:
       #  run: |
       #    jfrog rt gradle clean artifactoryPublish -b . --build-name=interaction-service --build-number=1234
       #    jfrog rt bp --build-name=interaction-service --build-number=1234
-        env:
+      #  env:
       #    artifactory_user: ${{ secrets.ARTIFACTORY_USER }}
       #    artifactory_password: ${{ secrets.ARTIFACTORY_PASSWORD }}  
-           JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}      
+      #     JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}      
       - uses: actions/upload-artifact@master
         with:
           name: sbuild-artifact
