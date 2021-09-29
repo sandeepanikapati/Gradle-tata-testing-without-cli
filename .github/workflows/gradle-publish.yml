@@ -33,7 +33,7 @@ jobs:
       #     JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }} 
       - name: Publish to Jfrog
         run: |
-          jfrog rt gradle clean artifactoryPublish -b .
+          jfrog rt gradle clean artifactoryPublish -b ../../
       #    jfrog rt bp
           
         env:
