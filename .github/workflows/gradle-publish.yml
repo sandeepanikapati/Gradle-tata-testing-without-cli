@@ -14,11 +14,11 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Gradle wrapper
-        run: gradle wrapper --scan
+        run: gradle wrapper
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradle build --warning-mode fail
       - name: Publish package
         run: gradle publish
         env: 
