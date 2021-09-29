@@ -38,9 +38,6 @@ project('services') {
 configure(javaProjects()) {
     apply plugin: 'java'
     apply plugin: 'maven-publish'
-    
-    }
-
     publishing {
         publications {
             mavenJava(MavenPublication) {
