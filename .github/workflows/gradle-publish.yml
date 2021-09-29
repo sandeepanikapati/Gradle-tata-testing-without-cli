@@ -34,7 +34,7 @@ jobs:
       - name: Publish to Jfrog
         run: |
           jfrog rt gradle clean artifactoryPublish -b /home/runner/work/tata-testing/tata-testing/gradle-example-publish/build.gradle
-          jfrog rt bp
+      #    jfrog rt bp
           
         env:
           JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
