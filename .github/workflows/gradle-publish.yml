@@ -1,4 +1,4 @@
-name: Harish-testing
+name: Harish-testing test
 on: [push, pull_request]
 jobs:
   publish:
