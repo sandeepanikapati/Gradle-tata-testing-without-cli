@@ -21,4 +21,4 @@ jobs:
       - name: Build with Gradle
         run: gradle build
         env: 
-          JF_ARTIFACTORY_1: ${{ secrets.ARTIFACTORY_TOKEN }}
+          JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
