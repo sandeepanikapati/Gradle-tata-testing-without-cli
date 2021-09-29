@@ -6,6 +6,9 @@ jobs:
     outputs:
         output1: ${{ steps.repo_var.outputs.var }}  
     steps:
+      - uses: gradle/gradle-build-action@v2
+        with: 
+            gradle-version: 6.5
       - uses: actions/checkout@v2
       - name: Set repo variable
         run: |
