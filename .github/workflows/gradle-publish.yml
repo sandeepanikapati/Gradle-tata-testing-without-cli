@@ -19,7 +19,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Gradle
-        run: gradle artifactoryPublish
+        run: gradle artifactoryPublish -b /home/runner/work/Gradle-tata-testing-without-cli/Gradle-tata-testing-without-cli/gradle-example-publish/build.gradle
         #run: gradle build -b /home/runner/work/Gradle-tata-testing-without-cli/Gradle-tata-testing-without-cli/gradle-example-publish/build.gradle
         env: 
           JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
