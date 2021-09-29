@@ -24,7 +24,7 @@ allprojects {
     status = 'Integration'
     repositories {
         maven {
-            url "https://frogtester9.jfrog.io/artifactory/gradle-local"
+            url "https://frogtester9.jfrog.io/artifactory/beaute-gradle-dev"
         }
     }
 }
@@ -66,7 +66,7 @@ artifactory {
     contextUrl = 'https://frogtester9.jfrog.io/artifactory'
     publish {
         repository {
-            repoKey = 'gradle-local' // The Artifactory repository key to publish to
+            repoKey = 'beaute-gradle-dev' // The Artifactory repository key to publish to
             username = "frogtester9" // The publisher user name
             password = "Frogtester@9" // The publisher password
         }
