@@ -16,8 +16,8 @@ jobs:
           distribution: 'adopt'
       #- name: Gradle wrapper
       #  run: gradle wrapper
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      #- name: Make gradlew executable
+      #  run: chmod +x ./gradlew
       - name: Build with Gradle
         run: ./gradlew build --warning-mode fail
       - name: Publish package
