@@ -72,8 +72,8 @@ artifactory {
     publish {
         repository {
             repoKey = 'beaute-gradle-dev' // The Artifactory repository key to publish to
-            username = "frogtester9" // The publisher user name
-            password = "Frogtester@9" // The publisher password
+            username = "$ARTIFACTORY_USERNAME" // The publisher user name
+            password = "$ARTIFACTORY_PASSWORD" // The publisher password
         }
         defaults {
             publications('mavenJava')
