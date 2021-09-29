@@ -1,17 +1,24 @@
-name: Build & Publish Debug APK
-on: [push, pull_request]
+name: Interaction
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+        output1: ${{ steps.repo_var.outputs.var }}  
     steps:
-    - uses: actions/checkout@v1
-    - name: set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Make Gradle executable
-      run: chmod +x ./gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      - uses: actions/checkout@v2
+      - name: Set repo variable
+        run: |
+          op=$(basename $(git remote show -n origin | grep Fetch | cut -d: -f2-))
+          echo "repo_v=$op" >> $GITHUB_ENV
+      - id: repo_var
+        run: echo "::set-output name=var::${{ env.repo_v }}"   
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Build with Gradle
+        run: gradle build
+        env: 
+          JF_ARTIFACTORY_1: ${{ secrets.ARTIFACTORY_TOKEN }}
