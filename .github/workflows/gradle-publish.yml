@@ -10,10 +10,12 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      #- name: Build with Gradle
-      #  run: gradle build
+      - name: Build with Gradle
+        run: gradle build
       - name: jfrog cli setup
         uses: jfrog/setup-jfrog-cli@v2
+      - name: Build with Gradle
+        run: gradle publish
       # - name: Jfrog cli deploy  
       #   run: |
       #     # Ping the server
@@ -21,10 +23,10 @@ jobs:
       - uses: jfrog/setup-jfrog-cli@v2
         env:
           JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
-      - run: |
-          jfrog rt ping
-      - run: |
-          jfrog rt gradlec --global --server-id-resolve=artifactory --server-id-deploy=artifactory --repo-resolve=beaute-gradle-dev --repo-deploy=gradle-local
+      #- run: |
+      #    jfrog rt ping
+      #- run: |
+      #    jfrog rt gradlec --global --server-id-resolve=artifactory --server-id-deploy=artifactory --repo-resolve=beaute-gradle-dev --repo-deploy=gradle-local
       #
       #   run: gradle deploy
       #   env: 
