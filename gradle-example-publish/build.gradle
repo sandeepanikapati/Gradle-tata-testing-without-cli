@@ -33,6 +33,18 @@ def javaProjects() {
     subprojects.findAll { new File(it.projectDir, 'src').directory }
 }
 
+allprojects {
+    apply plugin: 'com.jfrog.artifactory'
+    group = 'org.jfrog.test.gradle.publish'
+    version = currentVersion
+    status = 'Integration'
+    repositories {
+        maven {
+            url "http://127.0.0.1:8081/artifactory/libs-release"
+        }
+    }
+}
+
 // Setting this property to true will make the artifactoryPublish task
 // skip this module (in our case, the root module):
 artifactoryPublish.skip = true
