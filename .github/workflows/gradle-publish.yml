@@ -1,5 +1,5 @@
-name: Interaction
-on: [push]
+name: Interaction -test
+on: [push, pull_request]
 jobs:
   # sonarQubeTrigger:
   #   name: SonarQube Trigger
