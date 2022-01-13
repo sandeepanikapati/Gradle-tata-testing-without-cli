@@ -68,7 +68,7 @@ artifactory {
     clientConfig.setIncludeEnvVars(true)
     clientConfig.info.addEnvironmentProperty('test.adding.dynVar',new java.util.Date().toString())
 
-    contextUrl = 'https://frogtester9.jfrog.io/artifactory'
+    contextUrl = 'https://satheeshart.jfrog.io/artifactory'
     publish {
         repository {
             repoKey = 'beaute-gradle-dev' // The Artifactory repository key to publish to
