@@ -72,8 +72,8 @@ artifactory {
     publish {
         repository {
             repoKey = 'san-gradle-dev' // The Artifactory repository key to publish to
-            username = "$ARTIFACTORY_USERNAME" // The publisher user name
-            password = "$ARTIFACTORY_PASSWORD" // The publisher password
+            username = "sandeep" // The publisher user name
+            password = "Password123" // The publisher password
         }
         defaults {
             publications('mavenJava')
