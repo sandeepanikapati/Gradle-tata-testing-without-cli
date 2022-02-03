@@ -1,4 +1,4 @@
-name: testin
+name: testi
 on: [push, pull_request]
 jobs:
   build:
