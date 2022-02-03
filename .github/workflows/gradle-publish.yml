@@ -25,4 +25,4 @@ jobs:
         run: gradle artifactoryPublish -b /home/runner/work/Gradle-tata-testing-without-cli/Gradle-tata-testing-without-cli/gradle-example-publish/build.gradle
         #run: gradle build -b /home/runner/work/Gradle-tata-testing-without-cli/Gradle-tata-testing-without-cli/gradle-example-publish/build.gradle
         env: 
-          JF_ARTIFACTORY_1: ${{ secrets.HARISH_CLI_GITHUB_ACTIONS }}
+          JF_ARTIFACTORY_1: ${{ secrets.MY_PWD }}
